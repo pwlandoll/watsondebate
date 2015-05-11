@@ -1,0 +1,146 @@
+
+td {
+	height: 65px;
+}
+
+input[type=checkbox] {
+    /* Triple-sized Checkboxes */
+    -ms-transform: scale(3); /* IE */
+    -moz-transform: scale(3); /* FF */
+    -webkit-transform: scale(3); /* Safari and Chrome */
+    -o-transform: scale(3); /* Opera */
+    margin-left: 5px;
+}
+
+label {
+	display: inline-block;
+}
+
+.smallerFont {
+	font-size: 30px;
+	color: #FFFFFF;
+
+}
+
+.main {
+    width: 75%;
+    height:75%;
+    position: absolute;
+    top:0;   bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.answer {
+	border:1px solid #fff;
+	border-bottom-right-radius:1px;
+    padding: 20px 10 20px;
+    background-color:#FFF;
+	color:#000;
+    min-width: 600px;
+    max-width: 760px;
+    font-size: 19px;
+}
+
+.answerContent {
+    height: 340px;
+    overflow: auto;
+    padding: 5px 15px 10px;
+}
+
+.confidence {
+    padding: 10px 15px 5px;
+    color: #A75265;
+}
+
+.hidden {
+    display: none;
+}
+
+.evidence-title {
+    font-weight: 500;
+    color: #000;
+}
+
+.evidence-modal-header {
+    background: #037E8C; 
+    color: #fff;
+}
+
+.evidence-modal-body {
+    background: #fff; 
+    color: #000;
+    height:400px;
+    overflow: auto;
+}
+
+.evidence-content {
+	color: #000;
+}
+
+.slick-dots li button:before {
+    color: white; 
+}
+
+.answerDiv {
+	border:2px dashed;
+	border-color:#002270;
+	background-color:#FFF;
+	width:100%;
+	color:#000;
+	text-align: center;
+	padding: 10px;
+	padding-top:0px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#searchTerm {
+	min-width: 600px; 
+	max-width: 700px;
+}
+ 
+#submitSearchTerm {
+	color: #eee; 
+	background-color: #037E8C; 
+	vertical-align: middle; 
+	border-radius: 0; 
+	border: 2px;
+}
+
+.dropDownSampleQuestion {
+    color: #eee; 
+    background-color: #037E8C; 
+    vertical-align: middle; 
+    border-radius: 0; 
+    border: 2px;
+    height: 61px;
+}
+
+.dropDownSizing
+{
+	width:400px;
+	height:60px;
+	color:#000;
+	font-weight: bold;
+	font-size:20px;
+	padding-left:140px;
+}
+
+.textbox_styling
+{
+	font-weight: bold;
+	font-size:30px;
+}
+
+table
+{
+	border-spacing: 10px;
+	margin: 12px 12px 12px 12px;
+}
+
+.label_padding
+{
+	padding-right: 10px;
+}

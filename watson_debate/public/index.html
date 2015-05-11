@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<link rel="shortcut icon" href="assets/img/favicon.png">
+	
+	<title>Watson Debate Corpus Application</title>
+	
+	<!-- Bootstrap -->
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	<!-- Ladda -->
+	<link rel="stylesheet" href="ladda/ladda-themeless.min.css">
+	<!-- Slick -->
+	<link href="slick/slick.css" type="text/css" rel="stylesheet" />
+	<!-- Film -->
+	<link href="debate.css" type="text/css" rel="stylesheet" />
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	    <![endif]-->
+</head>
+
+<body>
+ 	<div class="main">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="page-header">
+						<h2>
+							Watson Debate
+							<h4>Ask Questions. Get information.</h4>
+						</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<form id="searchForm" class="form-inline" role="form"
+						target="form-iframe">
+						<div class="form-group">
+							<div id="sampleQuestions">
+								<form>
+								<div class="col-md-2"></div>
+									<table>
+										<col width = "500">
+										<div class = "cold-md-4">
+										<tbody>
+											<tr>
+												<td width="10%">
+													<label for="topicTxtBox" class="form-control; label_padding; smallerFont" style="float:right">Topic:&nbsp;</label>
+												</td>
+												<td width="70%">
+													<input type="text" id="topicTxtBox" data-placeholder="Enter topic here.." class="form-control" size="40" style="float:left" />					
+												</td>
+											</tr>
+											<tr>
+												<td width="10%">
+													<label for="selectIssues" class="form-control; smallerFont" style="float:right">Issues:&nbsp;</label>
+												</td>
+												<td width="70%">
+													<select id="selectIssues" class="form-control; dropDownSizing" style="float:left">
+														<option value="All Issues">All Issues</option>
+														<option value="Advantages">Advantages</option>
+														<option value="Counter-plans">Counter-plans</option>
+														<option value="Disadvantages">Disadvantages</option>
+														<option value="Harms or Significance">Harms/Significance</option>
+														<option value="Impacts">Impacts</option>
+														<option value="Inherancy">Inherancy</option>
+														<option value="Critiques">Kritiks</option>
+														<option value="Solvency">Solvency</option>
+														<option value="Theory">Theory</option>
+														<option value="Topicality">Topicality</option>
+													</select>				
+												</td>
+											</tr>
+											<tr>
+												<td width="10%">
+													<label for="keywordTxtBx" class="form-control; smallerFont" style="float:right">Keywords:&nbsp;</label>
+												</td>
+												<td width="70%">
+													<input type="text" id="keywordTxtBx" data-placeholder="Enter keywords here.." class="form-control" size="40" style="float:left" />					
+												</td>
+											</tr>
+											<tr>
+											<td>
+											</td>
+												<td width="80%">
+													<button type="submit" id="submitSearchTerm"
+													class="btn btn-lg btn-primary ladda-button"
+													data-style="expand-right" style="width:400px;height:80px">
+													<span class="ladda-label">Ask Watson</span>
+													</button>
+												</td>
+											</tr>
+										</tbody>
+										</div>
+									</table>
+									<div class="col-md-6"></div>
+								</form>
+							</div>
+						</div>
+					</form>
+	
+					<!-- Need somewhere to print answers once returned
+						See below! Those things that looked useless weren't.
+					-->
+				</div>
+			</div>
+	
+			<!-- Not useless, this is where the answers go -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div id="answerCarousel" class="single-item answer" style="margin-top: 10px;"></div>
+					<iframe name="form-iframe" src="about:blank" class="hidden"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Not useless -->
+	<div class="modal fade" id="evidence" tabindex="-1" role="dialog" aria-labelledby="evidenceLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content evidence-modal-content">
+				<div class="modal-header evidence-modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="evidenceLabel">Evidence</h4>
+				</div>
+				<div class="modal-body evidence-modal-body">
+					<div class="evidence-title">
+						<h3>Title</h3>
+					</div>
+					<div id="title" class="evidence-content"></div>
+					<!--
+					<div class="evidence-title">
+						<h3>Text</h3>
+					</div>
+					<div id="text" class="evidence-content"></div>
+					<div class="evidence-title">
+						<h3>Copyright</h3>
+					</div>
+					<div id="copyright" class="evidence-content"></div>
+					-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="jquery/jquery-2.1.0.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script src="ladda/spin.min.js"></script>
+	<script src="ladda/ladda.min.js"></script>
+	<script src="debate.js"></script>
+	<script>
+        $(function() {
+            WatsonFilms.App.init();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+---
+applications:
+- name : WatsonFilmsDW
+  mem : 512M
+  instances : 1
+  command : node app.js
+  host : debate
+  domain : mybluemix.net
+  path : ./watson_debate
